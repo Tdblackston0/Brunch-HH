@@ -3,50 +3,46 @@ const Schema = mongoose.Schema;
 
 //Create Schema
 const PostSchema = new Schema({
-  user:{
+  user: {
     type: Schema.Types.ObjectId,
-    ref: 'users'
+    ref: 'user'
   },
-  text:{
+  text: {
     type: String,
     required: true
   },
   name: {
-    type:String,
+    type: String,
   },
   avatar: {
-    type:String
+    type: String
   },
-  likes:[
-    {
-      user:{
-        type: Schema.Types.ObjectId,
-        ref:'users'
-      }
+  likes: [{
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: 'user'
     }
-  ],
-  comments:[
-    {
-      user:{
-        type: Schema.Types.ObjectId,
-        ref:'users'
-      },
-      text:{
-        type:String,
-        require: true
-      },
-      name: {
-        type:String,
-      },
-      avatar: {
-        type:String
-      },
-      date: {
-        type: Date,
-        default: Date.now
-      }
+  }],
+  comments: [{
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: 'user'
+    },
+    text: {
+      type: String,
+      require: true
+    },
+    name: {
+      type: String,
+    },
+    avatar: {
+      type: String
+    },
+    date: {
+      type: Date,
+      default: Date.now
     }
-  ],
+  }],
   date: {
     type: Date,
     default: Date.now

@@ -1,4 +1,4 @@
-const Validator = require('validator');
+/*const Validator = require('validator');
 const isEmpty = require('./is-empty');
 
 module.exports = function validateExperienceInput(data){
@@ -29,4 +29,4 @@ module.exports = function validateExperienceInput(data){
     errors,
     isValid: isEmpty(errors)
   }
-}
+}*/
